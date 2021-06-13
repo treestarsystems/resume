@@ -1,0 +1,18 @@
+.repo-list-description {
+ width: 200px;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+} 
+
+.loading-gif-container {
+ position:absolute;
+ width:100%;
+ height:100%;
+}
+
+.loading-gif-container img{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
