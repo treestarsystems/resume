@@ -1,39 +1,13 @@
-/*
-* Template Name: BreezyCV - Resume / CV / vCard / Portfolio Template
-* Author: LMPixels
-* Author URL: http://themeforest.net/user/lmpixels
-* Version: 1.2.0
-*/
-
-/* ------------------------------------------------------------
-1. Fonts
-2. General Styles
-3. Page loadig animation
-4. Header
-5. Page Content
-6. Elements
-7. Single Page (Blog Posts, 404 etc.)
-8. Media Queries
-9. Pricing
-10. Updates
------------------------------------------------------------- */
-
-/* ------------------------------------------------------------
-1. Fonts
------------------------------------------------------------- */
-/* Google fonts */
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i');
-
-/* Linear Icons Font */
 @import url('fonts/linear-icons-font/style.css');
-
-/* FontAwesome Free Icons Font */
 @import url('fonts/fontawesome-free-5.12.1-web/css/all.min.css');
 
+:root {
+ --resume-color-primary-1: #5050f5;
+ --resume-color-primary-2: #9d2bf3;
+ --resume-color-secondary: #5e2fd6;
+}
 
-/* ------------------------------------------------------------
-2. General Styles
------------------------------------------------------------- */
 html {
   margin: 0;
   width: 100%;
@@ -42,9 +16,10 @@ html {
   overflow: hidden;
 }
 
-/*
 body {
-  background-color: #f1edf7;
+  background-color: var(--resume-color-primary-1);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--resume-color-primary-2)), to(var(--resume-color-primary-1)));
+  background: linear-gradient(var(--resume-color-primary-2), var(--resume-color-primary-1));
   margin: 0;
   width: 100%;
   height: 100%;
@@ -53,27 +28,7 @@ body {
   font-family: 'Poppins', Helvetica, sans-serif;
   line-height: 1.65em;
   overflow: hidden;
-  color: #555;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-*/
-
-body {
-  background-color: #5050f5;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9d2bf3), to(#5050f5));
-  background: linear-gradient(#9d2bf3, #5050f5);
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  font-size: 15px;
-  font-family: 'Poppins', Helvetica, sans-serif;
-  line-height: 1.65em;
-  overflow: hidden;
-  color: #d5d5d5;
+  color: #aaaaaa;
   background-repeat: no-repeat;
   background-position: center;
   background-position: 50% 50%;
@@ -143,11 +98,11 @@ p {
   position: relative;
   width: 100%;
   max-width: 1280px;
-  min-height: 70vh;
-  margin: 15vh auto;
+  min-height: 80vh;
+  margin: 10vh auto;
   padding: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9d2bf3), to(#5050f5));
-  background: linear-gradient(#9d2bf3, #5050f5);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--resume-color-primary-2)), to(var(--resume-color-primary-1)));
+  background: linear-gradient(var(--resume-color-primary-2), var(--resume-color-primary-1));
   -webkit-box-shadow: 0 0 100px -5px rgba(0,0,0,.25);
   -moz-box-shadow: 0 0 100px -5px rgba(0,0,0,.25);
   box-shadow: 0 0 100px -5px rgba(0,0,0,.25);
@@ -173,7 +128,7 @@ input[type="submit"],
   line-height: 1.2;
   border: 0;
   outline: 0;
-  border: 2px solid #5e2fd6;
+  border: 2px solid var(--resume-color-secondary);
   color: #222;
   text-shadow: none;
   background-color: #fff;
@@ -204,23 +159,23 @@ input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: #5e2fd6;
+  background-color: var(--resume-color-secondary);
   color: #fff;
-  border: 2px solid #5e2fd6;
+  border: 2px solid var(--resume-color-secondary);
 }
 
 .btn-secondary {
-  border-color: #d5d5d5;
+  border-color: #aaaaaa;
   background-color: #fff;
-  box-shadow: 0px 10px 10px -8px #d5d5d5;
+  box-shadow: 0px 10px 10px -8px #aaaaaa;
   color: #666;
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  border-color: #d5d5d5;
-  background-color: #d5d5d5;
+  border-color: #aaaaaa;
+  background-color: #aaaaaa;
 }
 
 .animated {
@@ -266,7 +221,7 @@ input[type="submit"]:focus {
   width: 52px;
   height: 52px;
   margin: 100px auto;
-  background-color: #5e2fd6;
+  background-color: var(--resume-color-secondary);
 
   border-radius: 100%;  
   -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
@@ -346,7 +301,7 @@ input[type="submit"]:focus {
   ul.main-menu a.active,
   ul.main-menu a:focus,
   ul.main-menu a:hover {
-    color: #5e2fd6;
+    color: var(--resume-color-secondary);
   }
 
   ul.main-menu .menu-icon {
@@ -361,7 +316,7 @@ input[type="submit"]:focus {
     opacity: 0;
     color: #fff;
     padding: 2px 10px;
-    background-color: #5e2fd6;
+    background-color: var(--resume-color-secondary);
     white-space: nowrap;
     right: 0;
     top: -50%;
@@ -414,7 +369,7 @@ input[type="submit"]:focus {
 }
 
 .lmpixels-arrows-nav div:hover {
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
 }
 /* --- End LMPixels Arrow Nav --- */
 
@@ -429,7 +384,7 @@ input[type="submit"]:focus {
   max-width: 100%;
   background-color: #fff;
   border: 3px solid #fff;
-  border-radius: 300px;
+  border-radius: 20px;
 }
 
 .header-photo:after {
@@ -437,7 +392,7 @@ input[type="submit"]:focus {
   opacity: 0.3;
   top: 7%;
   left: 7%;
-  border-radius: 300px;
+  border-radius: 20px;
   content: '';
   height: calc(100% + 0px);
   width: calc(100% + 0px);
@@ -511,7 +466,7 @@ input[type="submit"]:focus {
 
 .header-buttons .btn-primary:hover {
   background-color: #fff;
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
   border-color: #fff;
 }
 
@@ -603,7 +558,7 @@ input[type="submit"]:focus {
 }
 
 .ps:hover>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y {
-    background-color: #5e2fd6;
+    background-color: var(--resume-color-secondary);
 }
 
 .ps>.ps__scrollbar-y-rail {
@@ -632,7 +587,7 @@ input[type="submit"]:focus {
 }
 
 .page-title h2 span {
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
 }
 
 .page-title:after {
@@ -643,9 +598,9 @@ input[type="submit"]:focus {
   content: '';
   height: 30px;
   width: 50px;
-  background-image: -webkit-repeating-radial-gradient(center center, #5e2fd6, #5e2fd6 1px, transparent 0px, transparent 100%);
-  background-image: -moz-repeating-radial-gradient(center center, #5e2fd6, #5e2fd6 1px, transparent 0px, transparent 100%);
-  background-image: -ms-repeating-radial-gradient(center center, #5e2fd6, #5e2fd6 1px, transparent 0px, transparent 100%);
+  background-image: -webkit-repeating-radial-gradient(center center, var(--resume-color-secondary), var(--resume-color-secondary) 1px, transparent 0px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, var(--resume-color-secondary), var(--resume-color-secondary) 1px, transparent 0px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, var(--resume-color-secondary), var(--resume-color-secondary) 1px, transparent 0px, transparent 100%);
   -webkit-background-size: 6px 6px;
   -moz-background-size: 6px 6px;
   background-size: 6px 6px;
@@ -706,7 +661,7 @@ textarea.form-control, textarea.form-control:focus {
   top: 0;
   opacity: 0;
   background: transparent;
-  border: 2px solid #5e2fd6;
+  border: 2px solid var(--resume-color-secondary);
   border-right-width: 0;
   height: 100%;
   -webkit-transition: all 0.3s ease-in-out;
@@ -777,7 +732,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .form-group-with-icon.form-group-focus i {
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
 }
 
 .form-group.form-group-w-checkbox {
@@ -831,7 +786,7 @@ textarea.form-control, textarea.form-control:focus {
 
 .form-group .form-control:focus ~ label,
 .form-group.form-group-focus .form-control ~ label {
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
   top: -20px;
   left: 0;
   z-index: 1;
@@ -866,7 +821,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .block-title h3 span {
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
 }
 
 .block-title:after {
@@ -877,9 +832,9 @@ textarea.form-control, textarea.form-control:focus {
   content: '';
   height: 20px;
   width: 30px;
-  background-image: -webkit-repeating-radial-gradient(center center, #5e2fd6, #5e2fd6 1px, transparent 0px, transparent 100%);
-  background-image: -moz-repeating-radial-gradient(center center, #5e2fd6, #5e2fd6 1px, transparent 0px, transparent 100%);
-  background-image: -ms-repeating-radial-gradient(center center, #5e2fd6, #5e2fd6 1px, transparent 0px, transparent 100%);
+  background-image: -webkit-repeating-radial-gradient(center center, var(--resume-color-secondary), var(--resume-color-secondary) 1px, transparent 0px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, var(--resume-color-secondary), var(--resume-color-secondary) 1px, transparent 0px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, var(--resume-color-secondary), var(--resume-color-secondary) 1px, transparent 0px, transparent 100%);
   -webkit-background-size: 6px 6px;
   -moz-background-size: 6px 6px;
   background-size: 6px 6px;
@@ -928,7 +883,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .info-list .title {
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
   margin-right: 5px;
   font-weight: 600;
 }
@@ -956,7 +911,7 @@ textarea.form-control, textarea.form-control:focus {
 .info-block-w-icon i {
   position: relative;
   font-size: 42px;
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
   opacity: .7;
 }
 /* --- End Info block with Icon --- */
@@ -985,7 +940,7 @@ textarea.form-control, textarea.form-control:focus {
 .lm-info-block i {
   position: relative;
   font-size: 33px;
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
   z-index: 1;
 }
 
@@ -1000,7 +955,7 @@ textarea.form-control, textarea.form-control:focus {
   font-weight: 400;
   display: block;
   margin: 10px 0;
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
 }
 
 
@@ -1023,7 +978,7 @@ textarea.form-control, textarea.form-control:focus {
   max-width: 90px;
   max-height: 90px;
   margin: -45px auto 20px;
-  border-radius: 90px;
+  border-radius: 20px;
   box-shadow: 0px 10px 10px -8px rgba(0,0,0,.22);
 }
 
@@ -1044,7 +999,7 @@ textarea.form-control, textarea.form-control:focus {
   font-size: 30px;
   right: 0;
   top: 7px;
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
   opacity: .5;
 }
 
@@ -1147,8 +1102,8 @@ textarea.form-control, textarea.form-control:focus {
 .testimonials.owl-carousel .owl-nav .owl-next:hover,
 .clients.owl-carousel .owl-nav .owl-prev:hover,
 .clients.owl-carousel .owl-nav .owl-next:hover {
-    background-color: #5e2fd6;
-    border-color: #5e2fd6;
+    background-color: var(--resume-color-secondary);
+    border-color: var(--resume-color-secondary);
     color: #fff;
 }
 /* --- End of Sliders Nav --- */
@@ -1209,7 +1164,7 @@ textarea.form-control, textarea.form-control:focus {
   position: absolute;
   margin-left: -8px;
   border-radius: 10px;
-  background-color: #5e2fd6;
+  background-color: var(--resume-color-secondary);
   opacity: .25;
   z-index: 0;
 }
@@ -1224,7 +1179,7 @@ textarea.form-control, textarea.form-control:focus {
   margin-left: -4px;
   background-color: #fff;
   border-radius: 5px;
-  border: 2px solid #5e2fd6;
+  border: 2px solid var(--resume-color-secondary);
   z-index: 1;
 }
 
@@ -1280,7 +1235,7 @@ textarea.form-control, textarea.form-control:focus {
   position: relative;
   display: inline-block;
   background-color: #fff;
-  border: 1px solid #5e2fd6;
+  border: 1px solid var(--resume-color-secondary);
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -1295,7 +1250,7 @@ textarea.form-control, textarea.form-control:focus {
 .skills-second-style .skill-container:before {
   content: '';
   position: absolute;
-  background-color: #5e2fd6;
+  background-color: var(--resume-color-secondary);
 }
 
 .skills-second-style .skill-value {
@@ -1308,7 +1263,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .skills-second-style .skill-percentage {
-  background-color: #5e2fd6;
+  background-color: var(--resume-color-secondary);
   border: 2px solid #fff;
   -moz-border-radius: 9px;
   -webkit-border-radius: 9px;
@@ -1383,7 +1338,7 @@ textarea.form-control, textarea.form-control:focus {
 
 .knowledges li {;
   display: inline-block;
-  background-color: #5e2fd6;
+  background-color: var(--resume-color-secondary);
   border-radius: 3px;
   color: #fff;
   padding: 1px 10px;
@@ -1467,7 +1422,8 @@ textarea.form-control, textarea.form-control:focus {
 
 .map {
   width: 100%;
-  height: 140px;
+/*  height: 140px; */
+  height: 100%;
   margin: 0 0 35px;
 }
 
@@ -1606,7 +1562,7 @@ textarea.form-control, textarea.form-control:focus {
   width: 30px;
   height: 30px;
   background-color: #fff;
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
   text-align: center;
   line-height: 30px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1864,7 +1820,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .ajax-page-nav > div.nav-item a:hover {
-  background-color: #5e2fd6;
+  background-color: var(--resume-color-secondary);
   color: #fff;
 }
 
@@ -1923,7 +1879,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .project-general-info .fa {
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
   margin-right: 5px;
 }
 
@@ -1955,8 +1911,8 @@ textarea.form-control, textarea.form-control:focus {
 
 .share-buttons a:hover {
   color: #fff;
-  background-color: #5e2fd6;
-  border-color: #5e2fd6;
+  background-color: var(--resume-color-secondary);
+  border-color: var(--resume-color-secondary);
 }
 
 .share-buttons a:last-child {
@@ -2281,7 +2237,7 @@ blockquote {
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: #5e2fd6;
+    background-color: var(--resume-color-secondary);
     z-index: 99;
     padding: 30px 30px 10px 30px;
     text-align: center;
@@ -2381,7 +2337,7 @@ blockquote {
     height: 48px;
     line-height: 46px;
     text-align: center;
-    background-color: #5e2fd6;
+    background-color: var(--resume-color-secondary);
     right: 10px;
     font-size: 19px;
     top: 10px;
@@ -2470,7 +2426,7 @@ blockquote {
     right: 10px;
     bottom: 10px;
     padding: 5px 0;
-    border: 2px solid #5e2fd6;
+    border: 2px solid var(--resume-color-secondary);
   }
 
   .lmpixels-arrows-nav div {
@@ -2656,7 +2612,7 @@ blockquote {
   content: '';
   height: 2px;
   margin-top: 0;
-  background-color: #5e2fd6;
+  background-color: var(--resume-color-secondary);
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -2875,7 +2831,7 @@ blockquote {
 .fun-fact i {
   position: relative;
   font-size: 33px;
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
   margin-bottom: 6px;
   width: 33px;
   height: 33px;
@@ -2886,7 +2842,7 @@ blockquote {
   font-weight: 400;
   display: block;
   margin: 10px 0;
-  color: #5e2fd6;
+  color: var(--resume-color-secondary);
 }
 
 .fun-fact-block-value {
@@ -2919,7 +2875,7 @@ blockquote {
 }
 
 .lmpixels-map iframe {
-    height: 140px;
+    height: 55vh;
     max-width: 100%;
     width: 100%;
     margin: 0;
